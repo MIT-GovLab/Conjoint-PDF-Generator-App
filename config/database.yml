@@ -1,6 +1,6 @@
 development: &default
   adapter: postgresql
-  database: conjoint_rails_development
+  database: mit_conjoint_development
   encoding: utf8
   host: localhost
   min_messages: warning
@@ -10,7 +10,7 @@ development: &default
 
 test:
   <<: *default
-  database: conjoint_rails_test
+  database: mit_conjoint_test
 
 production: &deploy
   encoding: utf8
