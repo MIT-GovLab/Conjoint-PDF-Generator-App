@@ -1,11 +1,13 @@
 require 'csv'
 
 class ConjointExperimentsController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_conjoint_experiment, only: [:show, :edit, :update, :trial_data, :destroy]
 
   # GET /conjoint_experiments
   def index
-    @conjoint_experiments = ConjointExperiment.all
+    @conjoint_experiments = current_user.conjoint_experiments
   end
 
   # GET /conjoint_experiments/1
@@ -34,7 +36,7 @@ class ConjointExperimentsController < ApplicationController
 
   # GET /conjoint_experiments/new
   def new
-    @conjoint_experiment = ConjointExperiment.new
+    @conjoint_experiment = ConjointExperiment.new(user_id: current_user.id)
 
     @conjoint_attribute = @conjoint_experiment.conjoint_attributes.build
     @conjoint_attribute_value = @conjoint_attribute.conjoint_attribute_values.build
@@ -47,6 +49,7 @@ class ConjointExperimentsController < ApplicationController
   # POST /conjoint_experiments
   def create
     @conjoint_experiment = ConjointExperiment.new(conjoint_experiment_params)
+    @conjoint_experiment.user_id = current_user.id
 
     if @conjoint_experiment.save
       redirect_to @conjoint_experiment, notice: 'Conjoint experiment was successfully created.'

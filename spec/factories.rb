@@ -1,4 +1,7 @@
-FactoryGirl.define do  factory :trial do
+FactoryGirl.define do  factory :user do
+    
+  end
+  factory :trial do
     uid "MyString"
 conjoint_experiment_id 1
   end
