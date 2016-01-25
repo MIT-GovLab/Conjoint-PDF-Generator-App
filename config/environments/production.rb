@@ -27,4 +27,4 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 end
-Rack::Timeout.timeout = (ENV["RACK_TIMEOUT"] || 10).to_i
+Rack::Timeout.timeout = (ENV["RACK_TIMEOUT"] || 25).to_i
