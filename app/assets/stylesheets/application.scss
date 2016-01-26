@@ -16,6 +16,13 @@
   margin-bottom: 30px;
 }
 
+nav.navbar {
+  margin-bottom: 0;
+  img {
+    height: 100%;
+  }
+}
+
 .show-print {
   display: none;
 }
