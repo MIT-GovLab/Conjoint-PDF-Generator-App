@@ -2,7 +2,7 @@ class ConjointExperiment < ActiveRecord::Base
   belongs_to :user
 
   has_many :conjoint_attributes
-  has_many :trials
+  has_many :trials, dependent: :destroy
 
   accepts_nested_attributes_for :conjoint_attributes, reject_if: :all_blank, allow_destroy: true
 
