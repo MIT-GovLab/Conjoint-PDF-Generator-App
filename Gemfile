@@ -4,7 +4,7 @@ ruby "2.2.3"
 
 gem "airbrake"
 gem "autoprefixer-rails"
-gem 'aws-sdk', '~> 1.6'
+gem 'aws-sdk', '~> 2.3'
 gem "bourbon", "~> 4.2.0"
 gem "coffee-rails", "~> 4.1.0"
 gem "cocoon"
