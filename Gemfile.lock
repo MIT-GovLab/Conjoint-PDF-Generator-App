@@ -46,14 +46,12 @@ GEM
       execjs
       json
     awesome_print (1.6.1)
-    aws-sdk (2.11.11)
-      aws-sdk-resources (= 2.11.11)
-    aws-sdk-core (2.11.11)
-      aws-sigv4 (~> 1.0)
+    aws-sdk (2.3.0)
+      aws-sdk-resources (= 2.3.0)
+    aws-sdk-core (2.3.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.11.11)
-      aws-sdk-core (= 2.11.11)
-    aws-sigv4 (1.0.2)
+    aws-sdk-resources (2.3.0)
+      aws-sdk-core (= 2.3.0)
     bcrypt (3.1.10)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
@@ -323,7 +321,7 @@ DEPENDENCIES
   airbrake
   autoprefixer-rails
   awesome_print
-  aws-sdk (~> 2.3)
+  aws-sdk (= 2.3)
   bootstrap-sass
   bourbon (~> 4.2.0)
   bullet
